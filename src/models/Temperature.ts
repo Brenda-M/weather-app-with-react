@@ -4,5 +4,4 @@ export default interface Temperature {
   description: string;
   celcius: number;
   fahrenheit: number;
-
 }
