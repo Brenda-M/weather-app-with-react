@@ -1,25 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Search from './components/Search'
+import ForecastList from './components/ForecastList';
+import UseFetch from './components/UseFetch';
+import CurrentWeather from './components/CurrentWeather';
 
-function App() {
+
+
+const App = () => {
+  const APP_KEY = '61989eeb4a4021720c5ede6548438281';
+  const APP_URL = 'https://api.openweathermap.org/data/2.5';
+  const {data, error, isLoading, setUrl, setData} = UseFetch();
+
+  const getData = () => {
+    if(error) return <h2>Error when fetching: {error}</h2>
+    if(!data && isLoading) return <h2>LOADING...</h2>
+    if(!data) return null;
+    return <ForecastList weathers={data.list} />
+  };
+
+
+  const getInfo = (city) =>{
+    setUrl(`${APP_URL}/forecast?q=${city}&cnt=5&appid=${APP_KEY}`)
+  }
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <Search fetchData={getInfo} />
+      {getData()}
+      <CurrentWeather/>
+    </main>
   );
-}
+};
 
 export default App;
+
