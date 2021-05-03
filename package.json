@@ -1,6 +1,6 @@
 {
-  "homepage": "http://Brenda-M.github.io/weather-app-with-react.git",
   "name": "weather-forecast-app-final",
+  "homepage": "http://Brenda-M.github.io/weather-app-with-react.git",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
