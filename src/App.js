@@ -3,14 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Search from './components/Search'
 import ForecastList from './components/ForecastList';
 import UseFetch from './components/UseFetch';
-import CurrentWeather from './components/CurrentWeather';
 
 
 
 const App = () => {
   const APP_KEY = '61989eeb4a4021720c5ede6548438281';
   const APP_URL = 'https://api.openweathermap.org/data/2.5';
-  const {data, error, isLoading, setUrl, setData} = UseFetch();
+  const {data, error, isLoading, setUrl} = UseFetch();
 
   const getData = () => {
     if(error) return <h2>Error when fetching: {error}</h2>
@@ -30,7 +29,6 @@ const App = () => {
     <main className="App">
       <Search fetchData={getInfo} />
       {getData()}
-      <CurrentWeather/>
     </main>
   );
 };
