@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/weather-app-with-react.git/static/css/main.809443e9.chunk.css",
+    "main.css": "/weather-app-with-react.git/static/css/main.fe856a19.chunk.css",
     "main.js": "/weather-app-with-react.git/static/js/main.ff0812e6.chunk.js",
     "main.js.map": "/weather-app-with-react.git/static/js/main.ff0812e6.chunk.js.map",
     "runtime-main.js": "/weather-app-with-react.git/static/js/runtime-main.54c76c11.js",
@@ -12,15 +12,15 @@
     "static/js/3.d5165567.chunk.js.map": "/weather-app-with-react.git/static/js/3.d5165567.chunk.js.map",
     "index.html": "/weather-app-with-react.git/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/weather-app-with-react.git/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.809443e9.chunk.css.map": "/weather-app-with-react.git/static/css/main.809443e9.chunk.css.map",
+    "static/css/main.fe856a19.chunk.css.map": "/weather-app-with-react.git/static/css/main.fe856a19.chunk.css.map",
     "static/js/2.2eea995c.chunk.js.LICENSE.txt": "/weather-app-with-react.git/static/js/2.2eea995c.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/weather-app-with-react.git/static/media/marco-amatulli-WGpC98Tj_y0-unsplash.40375b2d.jpg"
+    "static/media/App.css": "/weather-app-with-react.git/static/media/main.40375b2d.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.54c76c11.js",
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.2eea995c.chunk.js",
-    "static/css/main.809443e9.chunk.css",
+    "static/css/main.fe856a19.chunk.css",
     "static/js/main.ff0812e6.chunk.js"
   ]
 }
