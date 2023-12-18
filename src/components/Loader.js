@@ -8,7 +8,7 @@ const Loader = () => {
         <div className="absolute top-0 left-0 h-24 w-24 rounded-full border-t-8 border-b-8 border-blue-500 animate-spin">
         </div>
       </div> */}
-<div className="border-gray-300 h-20 w-20 animate-spin rounded-full border-8 border-t-blue-600" />
+      <div className="border-gray-300 h-20 w-20 animate-spin rounded-full border-8 border-t-blue-600" />
     </div>
   );
 };
