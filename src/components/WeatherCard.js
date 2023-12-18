@@ -1,28 +1,25 @@
 import React from 'react';
-import { Card, CardDeck} from 'react-bootstrap';
 
 const WeatherCard = ({ dt, temp_min, temp_max, main, icon }) => {
   const date = new Date(dt);
+
   return (
-    <div>
-      <CardDeck >
-      <Card className='weather-cards p-3 m-4'  style={{ width: '15rem' }} bg="secondary">
-        <Card.Img
-          variant='top'
-          src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
-        />
-        <Card.Body>
-          <Card.Title>{main}</Card.Title>
-          <p>
-            {date.toLocaleDateString()} - {date.toLocaleTimeString()}
-          </p>
-          <p>Min: {Math.round(temp_min)}F</p>
-          <p>Max: {Math.round(temp_max)}F</p>
-        </Card.Body>
-      </Card>
-      </CardDeck>
-      
+    <div className="p-6 bg-white rounded-lg shadow-md" style={{ width: '14rem' }}>
+      <img
+        src={`http://openweathermap.org/img/wn/${icon}.png`}
+        alt="Weather Icon"
+        className="w-12 h-12 mb-4"
+      />
+      <div className="text-center">
+        <h2 className="text-xl font-bold mb-2">{main}</h2>
+        <p className="text-sm text-gray-700">
+          {date.toLocaleDateString()} - {date.toLocaleTimeString()}
+        </p>
+        <p className="text-base mb-2">Min: {Math.round(temp_min)}F</p>
+        <p className="text-base">Max: {Math.round(temp_max)}F</p>
+      </div>
     </div>
   );
 };
+
 export default WeatherCard;

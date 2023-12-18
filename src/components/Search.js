@@ -1,28 +1,54 @@
 import React, { useState } from 'react';
-import { FormControl } from 'react-bootstrap';
 
 const Search = ({ fetchData }) => {
   const [city, setCity] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const updateSearch = e => {
+  const updateSearch = (e) => {
     setCity(e.target.value);
   };
 
+  const handleClick = () => {
+    if (!city.trim()) {
+      setErrorMessage('Please enter a city name.');
+      return;
+    }
+
+    fetchData(city);
+    setErrorMessage('');
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      handleClick();
+    }
+  };
+
   return (
-    <div>
-      <div>
-        <h1 class="title">What's the weather like today?</h1>
+    <div className="container mx-auto mt-8">
+      <h3 className="text-center text-2xl mb-4 text-white">What's the weather like today?</h3>
+      <div className="mx-auto max-w-md">
+        <input
+          type="text"
+          placeholder="Enter city e.g. Paris"
+          className="w-full p-3 border border-gray-300 rounded"
+          onChange={updateSearch}
+          value={city}
+          onKeyDown={handleKeyDown}
+        />
       </div>
-      <div className="search-box">
-      <FormControl
-        placeholder='Enter city e.g Paris'
-        onChange={updateSearch}
-        value={city}
-        className='search-bar' 
-      />
+      {errorMessage && (
+        <p className="text-red-500 text-center mt-2">{errorMessage}</p>
+      )}
+      <div className="text-center mt-3">
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+          onClick={handleClick}
+        >
+          Check Weather
+        </button>
       </div>
-   
-      <button onClick={() => fetchData(city)}className='search-button'>Check Weather</button>
     </div>
   );
 };

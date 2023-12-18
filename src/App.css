@@ -1,6 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
 
-*{
+body{
+  background: #050F2E;
+  font-family: 'Grissol', sans-serif;
+}
+
+.App{
+  font-family: 'Grissol', sans-serif;
+}
+
+
+main{
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0,0, 0.75));
+  padding: 25px;
+}
+
+.weather-list{
+  display: grid;
+}
+
+
+/* *{
   margin:0;
   padding:0;
   box-sizing: border-box;
@@ -106,4 +127,4 @@ main{
   display: flex;
   flex-direction: column;
   color: whitesmoke;
-}
+} */
